@@ -1,0 +1,14 @@
+
+<div>
+  <label>key</label>
+  <input type="text" [(ngModel)]="key" />
+</div>
+<br>
+<div>
+  <label>value</label>
+  <input type="text" [(ngModel)]="value" />
+</div>
+
+<p>Accumulated object: {{example$ | async | json}}</p>
+
+<button type="button" (click)="addObject()">start</button>
