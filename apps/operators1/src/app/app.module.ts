@@ -8,7 +8,12 @@ import { RouterModule } from '@angular/router';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' })
+    RouterModule.forRoot([
+      {
+        path: 'scan',
+        loadChildren: () => import('@operators/scan').then(m => m.ScanModule)
+      }
+    ], { initialNavigation: 'enabled' })
   ],
   providers: [],
   bootstrap: [AppComponent]

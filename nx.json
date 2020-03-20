@@ -17,6 +17,9 @@
     "operators1-e2e": {
       "tags": [],
       "implicitDependencies": ["operators1"]
+    },
+    "scan": {
+      "tags": []
     }
   }
 }
