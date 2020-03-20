@@ -10,5 +10,13 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "operators1": {
+      "tags": []
+    },
+    "operators1-e2e": {
+      "tags": [],
+      "implicitDependencies": ["operators1"]
+    }
+  }
 }
