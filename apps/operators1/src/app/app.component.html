@@ -3,6 +3,7 @@
 </header>
 
 <br>
+
 <h3>Scan operator <small><pre><code>scan(accumulator: function, seed: any): Observable</code></pre></small></h3>
 
 <button type="button" routerLink="/scan">Sum over time</button>
@@ -13,3 +14,15 @@
 <br>
 
 <router-outlet></router-outlet>
+
+<h3>iif operator <small><pre><code>iif
+  (
+  condition: () =>boolean,
+  trueResult: subscribeableOrPromise,
+  falseResult: subscribeableOrPromise
+  ):
+  Observable</code></pre></small></h3>
+<br>
+<br>
+
+<operators-first-or-second></operators-first-or-second>
