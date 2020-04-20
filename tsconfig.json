@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@operators/scan": ["libs/scan/src/index.ts"]
+      "@operators/scan": ["libs/scan/src/index.ts"],
+      "@operators/tap": ["libs/tap/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

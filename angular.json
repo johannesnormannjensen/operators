@@ -151,10 +151,43 @@
         }
       },
       "schematics": {}
+    },
+    "tap": {
+      "projectType": "library",
+      "root": "libs/tap",
+      "sourceRoot": "libs/tap/src",
+      "prefix": "operators",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/tap/tsconfig.lib.json",
+              "libs/tap/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/tap/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/tap/jest.config.js",
+            "tsConfig": "libs/tap/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/tap/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
   },
   "schematics": {
     "@nrwl/angular:application": {

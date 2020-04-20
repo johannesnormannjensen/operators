@@ -1,0 +1,12 @@
+<div>
+  <h5>A</h5>
+  <p [style.color]="odd ? 'red' : 'blue'">{{a$ | async}}</p>
+</div>
+<div>
+  <h5>B</h5>
+  <p [style.color]="(odd$ | async) ? 'red' : 'blue'">{{b$ | async}}</p>
+</div>
+<button type="button" (click)="odd = true">Odd?</button>
+<pre>
+  <code [innerHTML]="code"></code>
+</pre>

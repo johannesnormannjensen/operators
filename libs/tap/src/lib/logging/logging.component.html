@@ -1,0 +1,14 @@
+<div>
+  <input type="text" #input> <button type="button" (click)="add(input.value)">OK</button>
+</div>
+<div>
+  <h5>A</h5>
+  <p>{{a$ | async}}</p>
+</div>
+<div>
+  <h5>B</h5>
+  <p>{{b$ | async}}</p>
+</div>
+<pre>
+  <code [innerHTML]="code"></code>
+</pre>
