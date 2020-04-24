@@ -122,7 +122,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "creators:build"
+            "browserTarget": "creators:build",
+            "port": 4201
           },
           "configurations": {
             "production": {
