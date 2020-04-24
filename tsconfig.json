@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@operators/scan": ["libs/operators/scan/src/index.ts"],
-      "@operators/tap": ["libs/operators/tap/src/index.ts"]
+      "@operators/tap": ["libs/operators/tap/src/index.ts"],
+      "@operators/pure-ui": ["libs/pure-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

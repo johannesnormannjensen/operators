@@ -30,6 +30,9 @@
     },
     "operators/tap": {
       "tags": []
+    },
+    "pure-ui": {
+      "tags": []
     }
   },
   "tasksRunnerOptions": {
