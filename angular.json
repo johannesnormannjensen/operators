@@ -1,7 +1,7 @@
 {
   "version": 1,
   "projects": {
-    "pipeable/scan": {
+    "pipeable-scan": {
       "projectType": "library",
       "root": "libs/pipeable/scan",
       "sourceRoot": "libs/pipeable/scan/src",
@@ -29,7 +29,7 @@
       },
       "schematics": {}
     },
-    "pipeable/tap": {
+    "pipeable-tap": {
       "projectType": "library",
       "root": "libs/pipeable/tap",
       "sourceRoot": "libs/pipeable/tap/src",

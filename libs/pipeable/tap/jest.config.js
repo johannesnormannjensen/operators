@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'tap',
+  name: 'pipeable-tap',
   preset: '../../../jest.config.js',
   coverageDirectory: '../../coverage/libs/pipeable/tap',
   snapshotSerializers: [

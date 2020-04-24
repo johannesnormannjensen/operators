@@ -10,6 +10,11 @@ import { WhenComponent } from './when/when.component';
     CommonModule,
     RouterModule.forChild([
       {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'logging'
+      },
+      {
         path: 'logging',
         component: LoggingComponent
       },

@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'scan',
+  name: 'pipeable-scan',
   preset: '../../../jest.config.js',
   coverageDirectory: '../../coverage/libs/pipeable/scan',
   snapshotSerializers: [

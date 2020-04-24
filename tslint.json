@@ -78,23 +78,23 @@
         "allow": [],
         "depConstraints": [
           {
-            "sourceTag": "creators",
+            "sourceTag": "scope:creators",
             "onlyDependOnLibsWithTags": [
-              "creators",
-              "pure-ui"
+              "scope:creators",
+              "scope:shared"
             ]
           },
           {
-            "sourceTag": "pipeable",
+            "sourceTag": "scope:pipeable",
             "onlyDependOnLibsWithTags": [
-              "pipeable",
-              "pure-ui"
+              "scope:pipeable",
+              "scope:shared"
             ]
           },
           {
-            "sourceTag": "pure-ui",
+            "sourceTag": "scope:shared",
             "onlyDependOnLibsWithTags": [
-              "pure-ui"
+              "scope:shared"
             ]
           }
         ]
