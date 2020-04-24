@@ -6,6 +6,6 @@ describe('creators', () => {
   it('should display welcome message', () => {
     getHeader().get('h2').contains('Creators');
     getHeader().get('header').should('have.css', 'background-color', 'rgb(0, 128, 0)')
-    // getHeader().find("img").should('be.visible');
+    getHeader().find("img").should('be.visible');
   });
 });
