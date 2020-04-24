@@ -20,4 +20,4 @@ import { WhenComponent } from './when/when.component';
     ])
   ],
 })
-export class TapModule {}
+export class PipeableTapModule {}

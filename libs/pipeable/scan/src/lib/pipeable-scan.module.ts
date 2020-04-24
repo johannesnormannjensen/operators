@@ -27,4 +27,4 @@ import { FormsModule } from '@angular/forms';
   ],
   declarations: [SumOverTimeComponent, AccumulateObjectComponent]
 })
-export class ScanModule {}
+export class PipeableScanModule {}

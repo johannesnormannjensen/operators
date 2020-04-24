@@ -15,11 +15,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule.forRoot([
       {
         path: 'scan',
-        loadChildren: () => import('@operators/pipeable/scan').then(m => m.ScanModule)
+        loadChildren: () => import('@operators/pipeable/scan').then(m => m.PipeableScanModule)
       },
       {
         path: 'tap',
-        loadChildren: () => import('@operators/pipeable/tap').then(m => m.TapModule)
+        loadChildren: () => import('@operators/pipeable/tap').then(m => m.PipeableTapModule)
       }
     ], { initialNavigation: 'enabled' })
   ],

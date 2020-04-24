@@ -1,1 +1,1 @@
-export * from './lib/tap.module';
+export * from './lib/pipeable-tap.module';

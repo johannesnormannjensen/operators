@@ -1,1 +1,1 @@
-export * from './lib/scan.module';
+export * from './lib/pipeable-scan.module';
