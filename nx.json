@@ -11,11 +11,12 @@
     "nx.json": "*"
   },
   "projects": {
-    "scan": {
+    "operators": {
       "tags": []
     },
-    "tap": {
-      "tags": []
+    "operators-e2e": {
+      "tags": [],
+      "implicitDependencies": ["operators"]
     },
     "creators": {
       "tags": []
@@ -24,12 +25,11 @@
       "tags": [],
       "implicitDependencies": ["creators"]
     },
-    "operators": {
+    "operators/scan": {
       "tags": []
     },
-    "operators-e2e": {
-      "tags": [],
-      "implicitDependencies": ["operators"]
+    "operators/tap": {
+      "tags": []
     }
   },
   "tasksRunnerOptions": {

@@ -1,57 +1,57 @@
 {
   "version": 1,
   "projects": {
-    "scan": {
+    "operators/scan": {
       "projectType": "library",
-      "root": "libs/scan",
-      "sourceRoot": "libs/scan/src",
+      "root": "libs/operators/scan",
+      "sourceRoot": "libs/operators/scan/src",
       "prefix": "operators",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/scan/tsconfig.lib.json",
-              "libs/scan/tsconfig.spec.json"
+              "libs/operators/scan/tsconfig.lib.json",
+              "libs/operators/scan/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/scan/**"]
+            "exclude": ["**/node_modules/**", "!libs/operators/scan/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/scan/jest.config.js",
-            "tsConfig": "libs/scan/tsconfig.spec.json",
+            "jestConfig": "libs/operators/scan/jest.config.js",
+            "tsConfig": "libs/operators/scan/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/scan/src/test-setup.ts"
+            "setupFile": "libs/operators/scan/src/test-setup.ts"
           }
         }
       },
       "schematics": {}
     },
-    "tap": {
+    "operators/tap": {
       "projectType": "library",
-      "root": "libs/tap",
-      "sourceRoot": "libs/tap/src",
+      "root": "libs/operators/tap",
+      "sourceRoot": "libs/operators/tap/src",
       "prefix": "operators",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/tap/tsconfig.lib.json",
-              "libs/tap/tsconfig.spec.json"
+              "libs/operators/tap/tsconfig.lib.json",
+              "libs/operators/tap/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/tap/**"]
+            "exclude": ["**/node_modules/**", "!libs/operators/tap/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/tap/jest.config.js",
-            "tsConfig": "libs/tap/tsconfig.spec.json",
+            "jestConfig": "libs/operators/tap/jest.config.js",
+            "tsConfig": "libs/operators/tap/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/tap/src/test-setup.ts"
+            "setupFile": "libs/operators/tap/src/test-setup.ts"
           }
         }
       },
