@@ -23,6 +23,9 @@
     },
     "tap": {
       "tags": []
+    },
+    "home": {
+      "tags": []
     }
   },
   "tasksRunnerOptions": {
