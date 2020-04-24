@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { PureUiModule } from '@operators/pure-ui';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    NgbModule,
     PureUiModule,
     RouterModule.forRoot([
       {
@@ -24,4 +26,5 @@ import { PureUiModule } from '@operators/pure-ui';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
