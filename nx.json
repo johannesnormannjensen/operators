@@ -11,13 +11,6 @@
     "nx.json": "*"
   },
   "projects": {
-    "operators1": {
-      "tags": []
-    },
-    "operators1-e2e": {
-      "tags": [],
-      "implicitDependencies": ["operators1"]
-    },
     "scan": {
       "tags": []
     },
@@ -33,6 +26,13 @@
     "creators-e2e": {
       "tags": [],
       "implicitDependencies": ["creators"]
+    },
+    "operators": {
+      "tags": []
+    },
+    "operators-e2e": {
+      "tags": [],
+      "implicitDependencies": ["operators"]
     }
   },
   "tasksRunnerOptions": {
