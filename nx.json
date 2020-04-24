@@ -12,30 +12,30 @@
   },
   "projects": {
     "pipeable": {
-      "tags": []
+      "tags": ["pipeable"]
     },
     "pipeable-e2e": {
       "tags": [],
       "implicitDependencies": ["pipeable"]
     },
     "creators": {
-      "tags": []
+      "tags": ["creators"]
     },
     "creators-e2e": {
       "tags": [],
       "implicitDependencies": ["creators"]
     },
     "pipeable/scan": {
-      "tags": []
+      "tags": ["pipeable"]
     },
     "pipeable/tap": {
-      "tags": []
+      "tags": ["pipeable"]
     },
     "pure-ui": {
-      "tags": []
+      "tags": ["pure-ui"]
     },
     "creators-interval": {
-      "tags": []
+      "tags": ["creators"]
     }
   },
   "tasksRunnerOptions": {
