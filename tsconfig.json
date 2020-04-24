@@ -16,10 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@operators/scan": ["libs/operators/scan/src/index.ts"],
-      "@operators/tap": ["libs/operators/tap/src/index.ts"],
-      "@operators/pure-ui": ["libs/pure-ui/src/index.ts"],
-      "@operators/creators/interval": ["libs/creators/interval/src/index.ts"]
+      "@operators/pipeable/scan": ["libs/pipeable/scan/src/index.ts"],
+      "@operators/pipeable/tap": ["libs/pipeable/tap/src/index.ts"],
+      "@operators/creators/interval": ["libs/creators/interval/src/index.ts"],
+      "@operators/pure-ui": ["libs/pure-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

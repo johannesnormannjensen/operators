@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'scan',
+  name: 'tap',
   preset: '../../../jest.config.js',
-  coverageDirectory: '../../coverage/libs/operators/scan',
+  coverageDirectory: '../../coverage/libs/pipeable/tap',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

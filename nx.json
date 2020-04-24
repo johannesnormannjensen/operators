@@ -11,12 +11,12 @@
     "nx.json": "*"
   },
   "projects": {
-    "operators": {
+    "pipeable": {
       "tags": []
     },
-    "operators-e2e": {
+    "pipeable-e2e": {
       "tags": [],
-      "implicitDependencies": ["operators"]
+      "implicitDependencies": ["pipeable"]
     },
     "creators": {
       "tags": []
@@ -25,10 +25,10 @@
       "tags": [],
       "implicitDependencies": ["creators"]
     },
-    "operators/scan": {
+    "pipeable/scan": {
       "tags": []
     },
-    "operators/tap": {
+    "pipeable/tap": {
       "tags": []
     },
     "pure-ui": {

@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'operators',
+  name: 'pipeable',
   preset: '../../jest.config.js',
-  coverageDirectory: '../../coverage/apps/operators',
+  coverageDirectory: '../../coverage/apps/pipeable',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

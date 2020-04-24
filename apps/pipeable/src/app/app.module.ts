@@ -11,11 +11,11 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       {
         path: 'scan',
-        loadChildren: () => import('@operators/scan').then(m => m.ScanModule)
+        loadChildren: () => import('@operators/pipeable/scan').then(m => m.ScanModule)
       },
       {
         path: 'tap',
-        loadChildren: () => import('@operators/tap').then(m => m.TapModule)
+        loadChildren: () => import('@operators/pipeable/tap').then(m => m.TapModule)
       }
     ], { initialNavigation: 'enabled' })
   ],

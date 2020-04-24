@@ -1,57 +1,57 @@
 {
   "version": 1,
   "projects": {
-    "operators/scan": {
+    "pipeable/scan": {
       "projectType": "library",
-      "root": "libs/operators/scan",
-      "sourceRoot": "libs/operators/scan/src",
+      "root": "libs/pipeable/scan",
+      "sourceRoot": "libs/pipeable/scan/src",
       "prefix": "operators",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/operators/scan/tsconfig.lib.json",
-              "libs/operators/scan/tsconfig.spec.json"
+              "libs/pipeable/scan/tsconfig.lib.json",
+              "libs/pipeable/scan/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/operators/scan/**"]
+            "exclude": ["**/node_modules/**", "!libs/pipeable/scan/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/operators/scan/jest.config.js",
-            "tsConfig": "libs/operators/scan/tsconfig.spec.json",
+            "jestConfig": "libs/pipeable/scan/jest.config.js",
+            "tsConfig": "libs/pipeable/scan/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/operators/scan/src/test-setup.ts"
+            "setupFile": "libs/pipeable/scan/src/test-setup.ts"
           }
         }
       },
       "schematics": {}
     },
-    "operators/tap": {
+    "pipeable/tap": {
       "projectType": "library",
-      "root": "libs/operators/tap",
-      "sourceRoot": "libs/operators/tap/src",
+      "root": "libs/pipeable/tap",
+      "sourceRoot": "libs/pipeable/tap/src",
       "prefix": "operators",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/operators/tap/tsconfig.lib.json",
-              "libs/operators/tap/tsconfig.spec.json"
+              "libs/pipeable/tap/tsconfig.lib.json",
+              "libs/pipeable/tap/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/operators/tap/**"]
+            "exclude": ["**/node_modules/**", "!libs/pipeable/tap/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/operators/tap/jest.config.js",
-            "tsConfig": "libs/operators/tap/tsconfig.spec.json",
+            "jestConfig": "libs/pipeable/tap/jest.config.js",
+            "tsConfig": "libs/pipeable/tap/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/operators/tap/src/test-setup.ts"
+            "setupFile": "libs/pipeable/tap/src/test-setup.ts"
           }
         }
       },
@@ -184,129 +184,6 @@
         }
       }
     },
-    "operators": {
-      "projectType": "application",
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "apps/operators",
-      "sourceRoot": "apps/operators/src",
-      "prefix": "operators",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/operators",
-            "index": "apps/operators/src/index.html",
-            "main": "apps/operators/src/main.ts",
-            "polyfills": "apps/operators/src/polyfills.ts",
-            "tsConfig": "apps/operators/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "apps/operators/src/favicon.ico",
-              "apps/operators/src/assets"
-            ],
-            "styles": ["apps/operators/src/styles.scss"],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/operators/src/environments/environment.ts",
-                  "with": "apps/operators/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "operators:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "operators:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "operators:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/operators/tsconfig.app.json",
-              "apps/operators/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/operators/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/operators/jest.config.js",
-            "tsConfig": "apps/operators/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/operators/src/test-setup.ts"
-          }
-        }
-      }
-    },
-    "operators-e2e": {
-      "root": "apps/operators-e2e",
-      "sourceRoot": "apps/operators-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/operators-e2e/cypress.json",
-            "tsConfig": "apps/operators-e2e/tsconfig.e2e.json",
-            "devServerTarget": "operators:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "operators:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/operators-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/operators-e2e/**"]
-          }
-        }
-      }
-    },
     "pure-ui": {
       "projectType": "library",
       "root": "libs/pure-ui",
@@ -370,6 +247,129 @@
           "style": "scss"
         }
       }
+    },
+    "pipeable": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/pipeable",
+      "sourceRoot": "apps/pipeable/src",
+      "prefix": "operators",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/pipeable",
+            "index": "apps/pipeable/src/index.html",
+            "main": "apps/pipeable/src/main.ts",
+            "polyfills": "apps/pipeable/src/polyfills.ts",
+            "tsConfig": "apps/pipeable/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/pipeable/src/favicon.ico",
+              "apps/pipeable/src/assets"
+            ],
+            "styles": ["apps/pipeable/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/pipeable/src/environments/environment.ts",
+                  "with": "apps/pipeable/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "pipeable:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "pipeable:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "pipeable:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/pipeable/tsconfig.app.json",
+              "apps/pipeable/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/pipeable/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/pipeable/jest.config.js",
+            "tsConfig": "apps/pipeable/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/pipeable/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "pipeable-e2e": {
+      "root": "apps/pipeable-e2e",
+      "sourceRoot": "apps/pipeable-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/pipeable-e2e/cypress.json",
+            "tsConfig": "apps/pipeable-e2e/tsconfig.e2e.json",
+            "devServerTarget": "pipeable:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "pipeable:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/pipeable-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/pipeable-e2e/**"]
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -385,5 +385,5 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "operators"
+  "defaultProject": "pipeable"
 }
