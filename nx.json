@@ -26,6 +26,13 @@
     },
     "home": {
       "tags": []
+    },
+    "creators": {
+      "tags": []
+    },
+    "creators-e2e": {
+      "tags": [],
+      "implicitDependencies": ["creators"]
     }
   },
   "tasksRunnerOptions": {
