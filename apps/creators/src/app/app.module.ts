@@ -10,11 +10,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    NgbModule,
     PureUiModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    NgbModule
+    RouterModule.forRoot([
+      {
+        path: 'interval',
+        loadChildren: () => import('@operators/creators/interval').then(m => m.CreatorsIntervalModule)
+      }
+    ], { initialNavigation: 'enabled' })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
