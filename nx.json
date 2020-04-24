@@ -33,6 +33,9 @@
     },
     "pure-ui": {
       "tags": []
+    },
+    "creators-interval": {
+      "tags": []
     }
   },
   "tasksRunnerOptions": {

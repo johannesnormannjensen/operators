@@ -338,6 +338,38 @@
           "style": "scss"
         }
       }
+    },
+    "creators-interval": {
+      "projectType": "library",
+      "root": "libs/creators/interval",
+      "sourceRoot": "libs/creators/interval/src",
+      "prefix": "operators",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/creators/interval/tsconfig.lib.json",
+              "libs/creators/interval/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/creators/interval/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/creators/interval/jest.config.js",
+            "tsConfig": "libs/creators/interval/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/creators/interval/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
