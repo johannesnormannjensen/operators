@@ -11,18 +11,42 @@
     "nx.json": "*"
   },
   "projects": {
-    "operators1": {
-      "tags": []
+    "pipeable": {
+      "tags": ["scope:pipeable"]
     },
-    "operators1-e2e": {
+    "pipeable-e2e": {
       "tags": [],
-      "implicitDependencies": ["operators1"]
+      "implicitDependencies": ["pipeable"]
     },
-    "scan": {
-      "tags": []
+    "creators": {
+      "tags": ["scope:creators"]
     },
-    "tap": {
+    "creators-e2e": {
+      "tags": [],
+      "implicitDependencies": ["creators"]
+    },
+    "pipeable-scan": {
+      "tags": ["scope:pipeable"]
+    },
+    "pipeable-tap": {
+      "tags": ["scope:pipeable"]
+    },
+    "pure-ui": {
+      "tags": ["scope:shared"]
+    },
+    "creators-interval": {
+      "tags": ["scope:creators"]
+    },
+    "creators-iif": {
       "tags": []
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
     }
   }
 }

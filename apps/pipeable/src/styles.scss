@@ -1,0 +1,13 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+header {
+  background-color: #143055;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: lightgrey;
+}

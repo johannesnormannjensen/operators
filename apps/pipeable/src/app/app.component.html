@@ -1,0 +1,18 @@
+<operators-header [title]="title"></operators-header>
+<br>
+<h4>Scan operator <small><pre><code>scan(accumulator: function, seed: any): Observable</code></pre></small></h4>
+
+<button type="button" routerLink="/scan">Sum over time</button>
+<button type="button" routerLink="/scan/accumulate-object">Accumulate object</button>
+
+<br>
+<h4>Tap operator <small><pre><code>tap(next: function): Observable</code></pre></small></h4>
+
+<button type="button" routerLink="/tap/logging">Logging</button>
+<button type="button" routerLink="/tap/when">When</button>
+
+<br>
+
+
+<router-outlet></router-outlet>
+
